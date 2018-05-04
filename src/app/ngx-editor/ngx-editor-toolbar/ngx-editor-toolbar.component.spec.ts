@@ -3,9 +3,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxEditorToolbarComponent } from './ngx-editor-toolbar.component';
 import { ngxEditorConfig } from '../common/ngx-editor.defaults';
-import { PopoverModule } from 'ngx-bootstrap';
 import { CommandExecutorService } from '../common/services/command-executor.service';
-import { MessageService } from '../common/services/message.service';
+import { MessengerService } from '../addons/messenger/services/messenger.service';
 
 describe('NgxEditorToolbarComponent', () => {
   let component: NgxEditorToolbarComponent;
@@ -13,9 +12,9 @@ describe('NgxEditorToolbarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [FormsModule, ReactiveFormsModule, PopoverModule.forRoot(), HttpClientModule],
+      imports: [FormsModule, ReactiveFormsModule, HttpClientModule],
       declarations: [NgxEditorToolbarComponent],
-      providers: [CommandExecutorService, MessageService]
+      providers: [CommandExecutorService, MessengerService]
     })
       .compileComponents();
   }));

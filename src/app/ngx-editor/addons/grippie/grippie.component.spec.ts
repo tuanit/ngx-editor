@@ -1,22 +1,23 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ElementRef, Renderer2 } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { NgxGrippieComponent } from './ngx-grippie.component';
-import { NgxEditorComponent } from '../ngx-editor.component';
-import { MessageService } from '../common/services/message.service';
-import { CommandExecutorService } from '../common/services/command-executor.service';
 
-describe('NgxGrippieComponent', () => {
-  let component: NgxGrippieComponent;
-  let fixture: ComponentFixture<NgxGrippieComponent>;
+import { GrippieComponent } from './grippie.component';
+import { NgxEditorComponent } from '../../ngx-editor.component';
+import { MessengerService } from '../messenger/services/messenger.service';
+import { CommandExecutorService } from '../../common/services/command-executor.service';
+
+describe('GrippieComponent', () => {
+  let component: GrippieComponent;
+  let fixture: ComponentFixture<GrippieComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientModule],
-      declarations: [NgxGrippieComponent],
+      declarations: [GrippieComponent],
       providers: [
         NgxEditorComponent,
-        MessageService,
+        MessengerService,
         CommandExecutorService,
         { provide: ElementRef, useValue: this.elementRef },
         { provide: Renderer2, useValue: this.renderer }
@@ -26,7 +27,7 @@ describe('NgxGrippieComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NgxGrippieComponent);
+    fixture = TestBed.createComponent(GrippieComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -34,5 +35,4 @@ describe('NgxGrippieComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
 });

@@ -1,13 +1,13 @@
 import { Component, HostListener } from '@angular/core';
-import { NgxEditorComponent } from '../ngx-editor.component';
+import { NgxEditorComponent } from '../../ngx-editor.component';
 
 @Component({
-  selector: 'app-ngx-grippie',
-  templateUrl: './ngx-grippie.component.html',
-  styleUrls: ['./ngx-grippie.component.scss']
+  selector: 'ngxe-grippie',
+  templateUrl: './grippie.component.html',
+  styleUrls: ['./grippie.component.scss']
 })
 
-export class NgxGrippieComponent {
+export class GrippieComponent {
 
   /** height of the editor */
   height: number;

@@ -1,13 +1,13 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+
 import { NgxEditorComponent } from './ngx-editor.component';
-import { NgxGrippieComponent } from './ngx-grippie/ngx-grippie.component';
 import { NgxEditorToolbarComponent } from './ngx-editor-toolbar/ngx-editor-toolbar.component';
-import { NgxEditorMessageComponent } from './ngx-editor-message/ngx-editor-message.component';
-import { PopoverModule } from 'ngx-bootstrap';
-import { MessageService } from './common/services/message.service';
 import { CommandExecutorService } from './common/services/command-executor.service';
+import { MessengerComponent } from './addons/messenger/messenger.component';
+import { GrippieComponent } from './addons/grippie/grippie.component';
+import { MessengerService } from './addons/messenger/services/messenger.service';
 
 describe('NgxEditorComponent', () => {
   let component: NgxEditorComponent;
@@ -15,12 +15,12 @@ describe('NgxEditorComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [FormsModule, ReactiveFormsModule, PopoverModule.forRoot(), HttpClientModule],
-      providers: [MessageService, CommandExecutorService],
+      imports: [FormsModule, ReactiveFormsModule, HttpClientModule],
+      providers: [MessengerService, CommandExecutorService],
       declarations: [NgxEditorComponent,
-        NgxGrippieComponent,
+        GrippieComponent,
         NgxEditorToolbarComponent,
-        NgxEditorMessageComponent
+        MessengerComponent
       ]
     })
       .compileComponents();

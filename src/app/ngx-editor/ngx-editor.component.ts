@@ -5,13 +5,12 @@ import {
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 
 import { CommandExecutorService } from './common/services/command-executor.service';
-import { MessageService } from './common/services/message.service';
-
 import { ngxEditorConfig } from './common/ngx-editor.defaults';
 import * as Utils from './common/utils/ngx-editor.utils';
+import { MessengerService } from './addons/messenger/services/messenger.service';
 
 @Component({
-  selector: 'app-ngx-editor',
+  selector: 'ngx-editor',
   templateUrl: './ngx-editor.component.html',
   styleUrls: ['./ngx-editor.component.scss'],
   providers: [
@@ -94,7 +93,7 @@ export class NgxEditorComponent implements OnInit, ControlValueAccessor {
    * @param _renderer access and manipulate the dom element
    */
   constructor(
-    private _messageService: MessageService,
+    private _messageService: MessengerService,
     private _commandExecutor: CommandExecutorService,
     private _renderer: Renderer2) { }
 
