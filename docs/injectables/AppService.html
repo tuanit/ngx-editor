@@ -469,7 +469,7 @@
 </nav>
                </div>
                <!-- START CONTENT -->
-               <div class="content additional-page">
+               <div class="content injectable">
                    <div class="content-data">
 
 
@@ -477,25 +477,204 @@
 
 
 
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>AppService</li>
+</ol>
 
-
-
-
-
-
-
-
-
-<h1 id="errors">Errors</h1>
-<p>Some common error responses given by editor and reasons</p>
-<ul>
-<li><strong>No Selection made</strong> - no  text is selected for action</li>
-<li><strong>Range out of the editor</strong> - editor has no clue where to execute the command, make sure the text-area is focussed</li>
-<li><strong>Invalid URL</strong> - entered URL is invalid</li>
-<li><strong>Invalid image</strong> - not a valid image selected for upload</li>
-<li><strong>Image Endpoint isn`t provided or invalid</strong> - reference to a link which is not an image or image may not be found</li>
-<li><strong>Only new links can be inserted. You cannot edit URL`s</strong> - you are trying to edit link which is not allowed</li>
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
 </ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/app.service.ts</code>
+        </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getLatestRelease">getLatestRelease</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(_http: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/app.service.ts:8</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>_http</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            no
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>Performs HTTP requests</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getLatestRelease"></a>
+                        <span class="name">
+                            <b>
+                            getLatestRelease
+                            </b>
+                            <a href="#getLatestRelease"><span class="fa fa-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getLatestRelease()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/app.service.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { HttpClient } from &#x27;@angular/common/http&#x27;;
+import { map } from &#x27;rxjs/operators&#x27;;
+
+@Injectable()
+export class AppService {
+
+  private releaseURL &#x3D; &#x27;https://api.github.com/repos/Sibiraj-S/ngx-editor/releases&#x27;;
+
+  /**
+   *
+   * @param _http Performs HTTP requests
+   */
+  constructor(private _http: HttpClient) { }
+
+  getLatestRelease(): any {
+
+    return this._http.get(this.releaseURL).pipe(
+      map((response: any) &#x3D;&gt; {
+        if (response &amp;&amp; response[&#x27;length&#x27;] !&#x3D;&#x3D; 0) {
+          return response;
+        } else {
+          return [];
+        }
+      })
+    );
+  }
+
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
 
                    </div><div class="search-results">
     <div class="has-results">
@@ -522,8 +701,8 @@
 
         <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'additional-page';
-            var COMPODOC_CURRENT_PAGE_URL = 'errors.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'AppService.html';
         </script>
 
        <script src="../js/search/search.js"></script>

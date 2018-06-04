@@ -469,7 +469,7 @@
 </nav>
                </div>
                <!-- START CONTENT -->
-               <div class="content additional-page">
+               <div class="content injectable">
                    <div class="content-data">
 
 
@@ -477,25 +477,267 @@
 
 
 
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>MessengerService</li>
+</ol>
 
-
-
-
-
-
-
-
-
-<h1 id="errors">Errors</h1>
-<p>Some common error responses given by editor and reasons</p>
-<ul>
-<li><strong>No Selection made</strong> - no  text is selected for action</li>
-<li><strong>Range out of the editor</strong> - editor has no clue where to execute the command, make sure the text-area is focussed</li>
-<li><strong>Invalid URL</strong> - entered URL is invalid</li>
-<li><strong>Invalid image</strong> - not a valid image selected for upload</li>
-<li><strong>Image Endpoint isn`t provided or invalid</strong> - reference to a link which is not an image or image may not be found</li>
-<li><strong>Only new links can be inserted. You cannot edit URL`s</strong> - you are trying to edit link which is not allowed</li>
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
 </ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/ngx-editor/addons/messenger/services/messenger.service.ts</code>
+        </p>
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#getMessage">getMessage</a>
+                            </li>
+                            <li>
+                                <a href="#sendMessage">sendMessage</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/ngx-editor/addons/messenger/services/messenger.service.ts:14</a></div>
+                            </td>
+                        </tr>
+
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getMessage"></a>
+                        <span class="name">
+                            <b>
+                            getMessage
+                            </b>
+                            <a href="#getMessage"><span class="fa fa-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>getMessage()</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/ngx-editor/addons/messenger/services/messenger.service.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>returns the message sent by the editor </p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>Observable&lt;string&gt;</code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="sendMessage"></a>
+                        <span class="name">
+                            <b>
+                            sendMessage
+                            </b>
+                            <a href="#sendMessage"><span class="fa fa-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>sendMessage(message: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/ngx-editor/addons/messenger/services/messenger.service.ts:28</a></div>
+                            </td>
+                        </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>sends message to the editor</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>message</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            no
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>message to be sent</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { Observable, Subject } from &#x27;rxjs&#x27;;
+
+/** time in which the message has to be cleared */
+const DURATION &#x3D; 7000;
+
+@Injectable({
+  providedIn: &#x27;root&#x27;
+})
+
+export class MessengerService {
+
+  /** variable to hold the user message */
+  private message: Subject&lt;string&gt; &#x3D; new Subject();
+
+  constructor() { }
+
+  /** returns the message sent by the editor */
+  getMessage(): Observable&lt;string&gt; {
+    return this.message.asObservable();
+  }
+
+  /**
+   * sends message to the editor
+   *
+   * @param message message to be sent
+   */
+  sendMessage(message: string): void {
+    this.message.next(message);
+    this.clearMessageIn(DURATION);
+    return;
+  }
+
+  /**
+   * a short interval to clear message
+   *
+   * @param milliseconds time in seconds in which the message has to be cleared
+   */
+  private clearMessageIn(milliseconds: number): void {
+    setTimeout(() &#x3D;&gt; {
+      this.message.next(undefined);
+    }, milliseconds);
+    return;
+  }
+
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
 
                    </div><div class="search-results">
     <div class="has-results">
@@ -522,8 +764,8 @@
 
         <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'additional-page';
-            var COMPODOC_CURRENT_PAGE_URL = 'errors.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'MessengerService.html';
         </script>
 
        <script src="../js/search/search.js"></script>
